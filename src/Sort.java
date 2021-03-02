@@ -68,7 +68,7 @@ public interface Sort{
     }
     static void mergeSort(Comparable[] a,boolean inplace){
         if(inplace) inplaceMergeSort(a);
-        outplaceMergeSort(a);
+        else outplaceMergeSort(a);
     }
 
     //OUTPLACE MERGE SORT
@@ -138,8 +138,8 @@ public interface Sort{
 
     //QUIK SORT
     static void quickSort(Comparable[] a,boolean threeWay){
+        shuffle(a);
         if(!threeWay){
-            shuffle(a);
             quickSortHelperSort(a,0,a.length-1);
         }
         else{

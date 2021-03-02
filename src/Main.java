@@ -15,7 +15,7 @@ public class Main {
 
         Sort.insertionSort(people);
         System.out.println(Arrays.toString(people));
-        Sort.shuffle(people);   
+        Sort.shuffle(people);
 
         Sort.shellSort(people);
         System.out.println(Arrays.toString(people));
@@ -44,5 +44,9 @@ public class Main {
         MaxHeap<Person> personHeap = new MaxHeap<>(Arrays.asList(people));
         personHeap.sort();
         System.out.println(personHeap);
+
+        Sort.quickSort(people,false);
+        int resultIndex = Search.binarySearch(people, person3);
+        System.out.println(resultIndex);
     }
 }
